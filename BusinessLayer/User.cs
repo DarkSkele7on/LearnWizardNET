@@ -25,7 +25,7 @@ namespace BusinessLayer
 
         // Add img for pfp
         [Required]
-        public DateOnly BirtDate { get; set; }
+        public DateTime BirtDate { get; set; }
 
         public List<Course> Courses { get; set; }
         public User()
@@ -33,7 +33,7 @@ namespace BusinessLayer
             this.Courses = new List<Course>();
         }
 
-        public User(string firstName_, string lastName_, string email_, DateOnly dateOfBirth_)
+        public User(string firstName_, string lastName_, string email_, DateTime dateOfBirth_)
         {
             this.UserName = firstName_;
             this.Email = email_;
