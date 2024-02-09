@@ -1,0 +1,122 @@
+/* Additional styles for the Contact Us page */
+.contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 110px auto;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #999;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #fff;
+}
+/* Add styles for the email form */
+.email-form {
+    display: none; /* Initially hide the form */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 10px auto; /* Adjust margin for positioning */
+    color: #fff;
+}
+
+.email-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+/* Add styles for the email form */
+.map-content {
+    display: none; /* Initially hide the form */
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    margin: auto; /* Adjust margin for positioning */
+    color: #fff;
+
+}
+
+/* Adjust contact icon styles to indicate clickability */
+.contact-icon {
+    cursor: pointer; /* Change cursor to pointer on hover to indicate clickability */
+}
+
+/* Add styles for the "Send us an email" link */
+.send-email-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.send-email-link:hover {
+    color: #0056b3;
+}
+
+/* Add styles for contact icons */
+contact-icon {
+    color: #007bff; /* Change the color as needed */
+    font-size: 24px; /* Adjust the icon size */
+    margin: 10px; /* Add spacing between icons */
+    text-decoration: none; /* Remove underline from icons */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+contact-icon a:hover {
+    opacity: 0.75;
+}

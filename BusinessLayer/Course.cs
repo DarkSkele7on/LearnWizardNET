@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,18 +23,19 @@ namespace BusinessLayer
 
         [ForeignKey("User")]
         public int UserId { get; set; }
+
         [Required]
         public User _User { get; set; }
 
-        public Course() 
-        { 
-            
-        }
-        public Course(string _name, string _description, User _user)
+        public Course()
         {
-            this.Name = _name;
-            this.Description = _description; 
-            this._User = _user;
+            // Default constructor
+        }
+        public Course(string name, string description, User user)
+        {
+            this.Name = name;
+            this.Description = description;
+            this._User = user;
         }
     }
 }

@@ -13,17 +13,19 @@ namespace MVC.Controllers
     public class CoursesController : Controller
     {
         private readonly LearnWizardDBContext _context;
+        private readonly CourseContext _courseContext;
 
-        public CoursesController(LearnWizardDBContext context)
+        public CoursesController(LearnWizardDBContext context, CourseContext courseContext)
         {
             _context = context;
+            _courseContext = courseContext;
         }
 
         // GET: Courses
         public async Task<IActionResult> Index()
         {
-            var learnWizardDBContext = _context.Courses.Include(c => c._User);
-            return View(await learnWizardDBContext.ToListAsync());
+            //var learnWizardDBContext = _context.Courses.Include(c => c._User);
+            return View(await _courseContext.ReadAllAsync());
         }
 
         // GET: Courses/Details/5
@@ -59,10 +61,13 @@ namespace MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Description,UserId")] Course course)
         {
-            if (ModelState.IsValid)
+            course._User = await _context.Users.FindAsync(course.UserId);
+            ModelState.Clear();
+            
+
+            if (await TryUpdateModelAsync(course))
             {
-                _context.Add(course);
-                await _context.SaveChangesAsync();
+                await _courseContext.CreateAsync(course); // Using CourseContext here
                 return RedirectToAction(nameof(Index));
             }
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", course.UserId);
@@ -102,7 +107,7 @@ namespace MVC.Controllers
             {
                 try
                 {
-                    _context.Update(course);
+                    await _courseContext.UpdateAsync(course);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

@@ -1,0 +1,40 @@
+/* Dynamic scaling for the hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: calc(50px + 5vh) 0; /* Dynamic padding based on viewport height */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    min-height: 100vh; /* Ensure the hero section covers the full viewport height */
+}
+
+    /* Dynamic font sizes for hero text */
+    .hero h1 {
+        font-size: calc(24px + (36 - 24) * ((100vw - 400px) / (1200 - 400))); /* Smoothly scale between 24px and 36px */
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: calc(16px + (18 - 16) * ((100vw - 400px) / (1200 - 400))); /* Smoothly scale between 16px and 18px */
+        margin-bottom: 40px;
+    }
+
+/* Adjust hero image and button sizes dynamically */
+.hero-image {
+    max-width: 50%; /* Adjust if necessary for dynamic scaling */
+    animation-delay: 1000s;
+    animation: showabout 1s;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    font-size: calc(14px + (18 - 14) * ((100vw - 400px) / (1200 - 400))); /* Scale font size dynamically */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+}

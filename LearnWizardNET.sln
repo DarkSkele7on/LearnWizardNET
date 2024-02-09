@@ -1,4 +1,3 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
@@ -6,8 +5,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{7A506FDE-B8B1-473C-817B-08197605931E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{B01DB85B-1C56-4E23-98B6-AD2FAD831424}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7A506FDE-B8B1-473C-817B-08197605931E} = {7A506FDE-B8B1-473C-817B-08197605931E}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{AA2EF830-4C78-474F-AEAD-159BDFE55FA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC", "MVC\MVC.csproj", "{AA2EF830-4C78-474F-AEAD-159BDFE55FA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7A506FDE-B8B1-473C-817B-08197605931E} = {7A506FDE-B8B1-473C-817B-08197605931E}
+		{B01DB85B-1C56-4E23-98B6-AD2FAD831424} = {B01DB85B-1C56-4E23-98B6-AD2FAD831424}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

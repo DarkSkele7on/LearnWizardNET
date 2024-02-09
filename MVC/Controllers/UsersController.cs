@@ -34,6 +34,7 @@ namespace MVC.Controllers
             }
 
             var user = await _context.Users
+                .Include(u => u.Courses)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {

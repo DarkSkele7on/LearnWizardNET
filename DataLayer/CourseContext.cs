@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Humanizer.Localisation;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,54 +11,29 @@ namespace DataLayer
 {
     public class CourseContext : IDb<Course, int>
     {
-        LearnWizardDBContext dbContext;
-        public CourseContext(LearnWizardDBContext _dBContext)
+        private readonly LearnWizardDBContext dbContext;
+
+        public CourseContext(LearnWizardDBContext dbContext)
         {
-            this.dbContext = _dBContext;
+            this.dbContext = dbContext;
         }
+
         public async Task CreateAsync(Course item)
         {
             try
             {
+                User authorFromDb = await dbContext.Users.FindAsync(item.Id);
+
+                if (authorFromDb != null)
+                {
+                    item._User = authorFromDb;
+                }
+
                 dbContext.Courses.Add(item);
                 await dbContext.SaveChangesAsync();
             }
             catch (Exception)
             {
-
-                throw;
-            }
-        }
-
-        public async Task DeleteAsync(int key)
-        {
-            try
-            {
-                Course courseFromDb = await ReadAsync(key, false, false);
-                dbContext.Courses.Remove(courseFromDb);
-                await dbContext.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public async Task<ICollection<Course>> ReadAllAsync(bool useNavigationalProperties = false, bool isReadOnly = true)
-        {
-            try
-            {
-                IQueryable<Course> query = dbContext.Courses;
-                if (useNavigationalProperties)
-                {
-                    query = query.Include(a => a._User);
-                }
-                return await query.ToArrayAsync();
-            }
-            catch (Exception)
-            {
-
                 throw;
             }
         }
@@ -67,11 +43,62 @@ namespace DataLayer
             try
             {
                 IQueryable<Course> query = dbContext.Courses;
+
                 if (useNavigationalProperties)
                 {
-                    query = query.Include(a => a._User);
+                    query = query.Include(b => b._User);
                 }
-                return await query.FirstOrDefaultAsync(x => x.Id == key);
+
+                if (isReadOnly)
+                {
+                    query = query.AsNoTrackingWithIdentityResolution();
+                }
+
+                return await query.FirstOrDefaultAsync(b => b.Id == key);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<ICollection<Course>> ReadAllAsync(bool useNavigationalProperties = false, bool isReadOnly = true)
+        {
+            try
+            {
+                IQueryable<Course> query = dbContext.Courses;
+
+                if (useNavigationalProperties)
+                {
+                    query = query.Include(b => b._User);
+                }
+
+                if (isReadOnly)
+                {
+                    query = query.AsNoTrackingWithIdentityResolution();
+                }
+
+                return await query.ToListAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task DeleteAsync(int key)
+        {
+            try
+            {
+                Course courseFromDb = await ReadAsync(key, false, false);
+
+                if (courseFromDb == null)
+                {
+                    throw new ArgumentException($"Course with id: {key} does not exist!");
+                }
+
+                dbContext.Courses.Remove(courseFromDb);
+                await dbContext.SaveChangesAsync();
             }
             catch (Exception)
             {
@@ -84,22 +111,29 @@ namespace DataLayer
         {
             try
             {
-                Course courseFromDB = await ReadAsync(item.Id, useNavigationalProperties, false);
+                Course coursekFromDb = await ReadAsync(item.Id, useNavigationalProperties, false);
 
-                if (courseFromDB == null) { await CreateAsync(item); }
-
-                dbContext.Entry(courseFromDB).CurrentValues.SetValues(item);
+                coursekFromDb.Name = item.Name;
+                coursekFromDb.Description = item.Description;
 
                 if (useNavigationalProperties)
                 {
-                    courseFromDB._User = item._User;
+                    User userFromDb = await dbContext.Users.FindAsync(item._User.Id);
+
+                    if (userFromDb != null)
+                    {
+                        coursekFromDb._User = userFromDb;
+                    }
+                    else
+                    {
+                        coursekFromDb._User = item._User;
+                    }
                 }
 
                 await dbContext.SaveChangesAsync();
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

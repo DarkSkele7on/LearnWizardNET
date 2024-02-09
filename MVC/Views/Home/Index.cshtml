@@ -1,29 +1,50 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\index.css">
+    <link rel="stylesheet" href="\css\header.css">
+    <link rel="stylesheet" href="\css\footer.css">
+    <link rel="stylesheet" href="\css\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="\js\transition.js"></script>
+    <title>Learn Wizard - Home</title>
+</head>
+<body onload="change()">
+    <header>
+        <nav>
+            <div class="logo">
+                <a class="logo-h" href="\Home\Index.html">
+                    <img src="\resources\logo.jpg" alt="logo" class="logo-image">
+                    Learn Wizard
+                </a>
+            </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+            <ul class="nav-log">
+                <li><question-mark><a href="\Home\About.cshtml">?</a></question-mark></li>
+                <li><a href="\Home\Login">Login</a></li>
+                <li><a href="\Home\Register.cshtml">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <div class="typewriter">
+                <h1><span id="title-text"></span></h1>
+                <p><span id="paragraph-text"></span></p>
+            </div>
+            <script src="\js\typewriter.js"></script>
+            <a href="\Home\About.cshtml" id="cta-button" class="cta-button">Learn More</a>
+        </div>
+        <img src="\resources\wizard.jpg" alt="Learn Wizard" class="hero-image">
+    </section>
+    <footer>
+        <a href="\Home\Contact.cshtml"><i class="fas fa-envelope" id="mitko"></i><p>2023 Learn Wizard</p></a>
+    </footer>
+</body>
+</html>
 
-<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-    <ul class="navbar-nav flex-grow-1">
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">ViewU</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Create">CreateU</a>
-        </li>
-    </ul>
-</div>
-<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-    <ul class="navbar-nav flex-grow-1">
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Courses" asp-action="Index">ViewC</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Courses" asp-action="Create">CreateC</a>
-        </li>
-    </ul>
-</div>
+

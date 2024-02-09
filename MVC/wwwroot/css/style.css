@@ -1,0 +1,86 @@
+/* Define CSS variables */
+:root {
+    --background-color: #000;
+    --text-color: #fff;
+    --link-color: #fff;
+    --link-hover-color: #e0e0e0;
+    --font-stack: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-stack);
+}
+
+/* Apply smooth scrolling behavior to HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global styles for the entire page */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow the list to wrap on smaller screens */
+    justify-content: center; /* Center items on smaller screens */
+    padding: 10px; /* Add some padding for smaller screens */
+}
+
+li {
+    margin: 10px; /* Adjust margin for spacing */
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+    /* Adjust link colors on hover */
+    a:hover {
+        color: var(--link-hover-color);
+    }
+
+.page-fade {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page-fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    /* Adjustments for tablets and below */
+    body {
+        flex-direction: column;
+    }
+
+    ul {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 5px 0; /* Reduce margin for list items */
+    }
+}

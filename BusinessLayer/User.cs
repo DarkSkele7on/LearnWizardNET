@@ -27,17 +27,19 @@ namespace BusinessLayer
         [Required]
         public DateTime BirtDate { get; set; }
 
-        public List<Course> Courses { get; set; }
+        public ICollection<Course> Courses { get; set; }
         public User()
         {
-            this.Courses = new List<Course>();
+            Courses = new List<Course>();
         }
 
-        public User(string firstName_, string lastName_, string email_, DateTime dateOfBirth_)
+        public User(string _userName ,string email_, DateTime dateOfBirth_, ICollection<Course> _courses)
         {
-            this.UserName = firstName_;
+            this.UserName = _userName;
             this.Email = email_;
             this.BirtDate = dateOfBirth_;
+            this.Courses = _courses;
+
             
         }
     }
