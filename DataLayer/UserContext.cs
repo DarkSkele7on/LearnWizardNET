@@ -45,16 +45,17 @@ namespace DataLayer
                 {
                     query = query.AsNoTrackingWithIdentityResolution();
                 }
-
-                return await query.FirstOrDefaultAsync(a => a.Id == key);
             }
             catch (Exception)
             {
                 throw;
             }
+
+            return null;
         }
 
-        public async Task<ICollection<User>> ReadAllAsync(bool useNavigationalProperties = false, bool isReadOnly = true)
+        public async Task<ICollection<User>> ReadAllAsync(bool useNavigationalProperties = false,
+            bool isReadOnly = true)
         {
             try
             {
@@ -104,7 +105,10 @@ namespace DataLayer
             {
                 User userFromDb = await ReadAsync(item.Id, useNavigationalProperties, false);
 
-                if (userFromDb == null) { await CreateAsync(item); }
+                if (userFromDb == null)
+                {
+                    await CreateAsync(item);
+                }
 
                 dbContext.Entry(userFromDb).CurrentValues.SetValues(item);
 
@@ -137,4 +141,5 @@ namespace DataLayer
             }
         }
     }
+
 }

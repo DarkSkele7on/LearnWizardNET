@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace DataLayer
 {
-    public class LearnWizardDBContext : DbContext
+    public class LearnWizardDBContext : IdentityDbContext<User>
     {
         public LearnWizardDBContext() : base() { }
 
@@ -25,7 +26,15 @@ namespace DataLayer
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>().HasData(
+                new User
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    UserName = "Admin",
+                    Email = "adminadminov@abv.bg"
+                });
             base.OnModelCreating(modelBuilder);
+            
         }
 
         public DbSet<User> Users { get; set; }

@@ -10,7 +10,9 @@
     flex-wrap: wrap;
     min-height: 100vh; /* Ensure the hero section covers the full viewport height */
 }
-
+.hero-text{
+    width: 50%;
+}
     /* Dynamic font sizes for hero text */
     .hero h1 {
         font-size: calc(24px + (36 - 24) * ((100vw - 400px) / (1200 - 400))); /* Smoothly scale between 24px and 36px */
@@ -25,8 +27,6 @@
 /* Adjust hero image and button sizes dynamically */
 .hero-image {
     max-width: 50%; /* Adjust if necessary for dynamic scaling */
-    animation-delay: 1000s;
-    animation: showabout 1s;
 }
 
 .cta-button {

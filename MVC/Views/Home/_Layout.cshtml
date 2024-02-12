@@ -20,9 +20,9 @@
             </div>
 
             <ul class="nav-log">
-                <li><question-mark><a href="@Url.Action("About")">?</a></question-mark></li>
-                <li><a href="@Url.Action("Login")">Login</a></li>
-                <li><a href="@Url.Action("Register")">Register</a></li>
+                <li><question-mark><a href="About">?</a></question-mark></li>
+                <li><a href="Login">Login</a></li>
+                <li><a href="Register">Register</a></li>
             </ul>
         </nav>
     </header>
@@ -32,7 +32,7 @@
         </main>
     </div>
     <footer>
-        <a href="@Url.Action("Contact")"><i class="fas fa-envelope" id="mitko"></i><p>2023 Learn Wizard</p></a>
+        <a href="Contact"><i class="fas fa-envelope" id="mitko"></i><p>2023 Learn Wizard</p></a>
     </footer>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

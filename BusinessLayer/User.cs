@@ -1,46 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace BusinessLayer
 {
-    public class User
+    public sealed class User : IdentityUser
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
-        [Required]
-        public string UserName { get; set; }
-
-        [Required]
-        [RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "Incorrect email!")]
-        public string Email { get; set; }
-
-        // Add type of User (admin/normal)
-
-        // Add img for pfp
-        [Required]
-        public DateTime BirtDate { get; set; }
+        public int Age { get; set; }
 
         public ICollection<Course> Courses { get; set; }
+
         public User()
         {
             Courses = new List<Course>();
+            Id = Guid.NewGuid().ToString();
+            Courses = new List<Course>();
         }
 
-        public User(string _userName ,string email_, DateTime dateOfBirth_, ICollection<Course> _courses)
+        public User(string username ,string email, int age)
         {
-            this.UserName = _userName;
-            this.Email = email_;
-            this.BirtDate = dateOfBirth_;
-            this.Courses = _courses;
-
-            
+            UserName = username;
+            Email = email;
+            Age = age;
+        }
+        public override string ToString()
+        {
+            return string.Format($"{Id} {UserName}");
         }
     }
 }
