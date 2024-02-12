@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/register.css">
+    <title>Learn Wizard - Register</title>
+</head>
+<body>
+    <section class="register">
+        <div class="register-container">
+            <h2>Register</h2>
+            <form id="register-form" action="/Account/Register" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="ConfirmPassword" required>
+                </div>
+                <button type="submit" class="cta-button">@Url.Action("Register")</button>
+            </form>
+            <p>Already have an account? <a href="@Url.Action("Login")">Login here</a></p>
+        </div>
+    </section>
+</body>
+</html>

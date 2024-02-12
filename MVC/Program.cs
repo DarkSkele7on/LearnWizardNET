@@ -4,12 +4,16 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddScoped<LearnWizardDBContext, LearnWizardDBContext>();
 builder.Services.AddScoped<UserContext, UserContext>();
 builder.Services.AddScoped<CourseContext, CourseContext>();
 
 var app = builder.Build();
+
+
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

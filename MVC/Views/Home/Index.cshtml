@@ -3,47 +3,22 @@
 }
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="\css\index.css">
-    <link rel="stylesheet" href="\css\header.css">
-    <link rel="stylesheet" href="\css\footer.css">
-    <link rel="stylesheet" href="\css\style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="\js\transition.js"></script>
+    <link rel="stylesheet" href="~/css/index.css">
     <title>Learn Wizard - Home</title>
 </head>
-<body onload="change()">
-    <header>
-        <nav>
-            <div class="logo">
-                <a class="logo-h" href="\Home\Index.html">
-                    <img src="\resources\logo.jpg" alt="logo" class="logo-image">
-                    Learn Wizard
-                </a>
-            </div>
-
-            <ul class="nav-log">
-                <li><question-mark><a href="\Home\About.cshtml">?</a></question-mark></li>
-                <li><a href="\Home\Login">Login</a></li>
-                <li><a href="\Home\Register.cshtml">Register</a></li>
-            </ul>
-        </nav>
-    </header>
+<body>
+    
     <section id="hero" class="hero">
         <div class="hero-text">
             <div class="typewriter">
                 <h1><span id="title-text"></span></h1>
                 <p><span id="paragraph-text"></span></p>
             </div>
-            <script src="\js\typewriter.js"></script>
-            <a href="\Home\About.cshtml" id="cta-button" class="cta-button">Learn More</a>
+            <script src="~/js/typewriter.js"></script>
+            <a href="About" id="cta-button" class="cta-button">Learn More</a>
         </div>
-        <img src="\resources\wizard.jpg" alt="Learn Wizard" class="hero-image">
+        <img src="~/resources/wizard.jpg" alt="Learn Wizard" class="hero-image">
     </section>
-    <footer>
-        <a href="\Home\Contact.cshtml"><i class="fas fa-envelope" id="mitko"></i><p>2023 Learn Wizard</p></a>
-    </footer>
 </body>
 </html>
 
