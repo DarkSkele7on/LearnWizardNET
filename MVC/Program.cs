@@ -1,11 +1,18 @@
 using DataLayer;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("LearnWizardAppDbContextConnection") ?? throw new InvalidOperationException("Connection string 'LearnWizardAppDbContextConnection' not found.");
+
+builder.Services.AddDbContext<LearnWizardAppDbContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<LearnWizardAppDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
-builder.Services.AddScoped<LearnWizardDBContext, LearnWizardDBContext>();
+builder.Services.AddScoped<LearnWizardAppDbContext, LearnWizardAppDbContext>();
 builder.Services.AddScoped<UserContext, UserContext>();
 builder.Services.AddScoped<CourseContext, CourseContext>();
 
