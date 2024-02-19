@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public class UserContext : IDb<User, int>
+    public class UserContext : IDb<User, string>
     {
-        private readonly LearnWizardDBContext dbContext;
+        private readonly LearnWizardAppDbContext _appDbContext;
 
-        public UserContext(LearnWizardDBContext dbContext)
+        public UserContext(LearnWizardAppDbContext appDbContext)
         {
-            this.dbContext = dbContext;
+            this._appDbContext = appDbContext;
         }
 
         public async Task CreateAsync(User item)
         {
             try
             {
-                dbContext.Users.Add(item);
-                await dbContext.SaveChangesAsync();
+                _appDbContext.Users.Add(item);
+                await _appDbContext.SaveChangesAsync();
             }
             catch (Exception)
             {
@@ -30,11 +30,11 @@ namespace DataLayer
             }
         }
 
-        public async Task<User> ReadAsync(int key, bool useNavigationalProperties = false, bool isReadOnly = true)
+        public async Task<User> ReadAsync(string key, bool useNavigationalProperties = false, bool isReadOnly = true)
         {
             try
             {
-                IQueryable<User> query = dbContext.Users;
+                IQueryable<User> query = _appDbContext.Users;
 
                 if (useNavigationalProperties)
                 {
@@ -45,13 +45,13 @@ namespace DataLayer
                 {
                     query = query.AsNoTrackingWithIdentityResolution();
                 }
+
+                return await query.FirstOrDefaultAsync(u=>u.Id == key);
             }
             catch (Exception)
             {
                 throw;
             }
-
-            return null;
         }
 
         public async Task<ICollection<User>> ReadAllAsync(bool useNavigationalProperties = false,
@@ -59,7 +59,7 @@ namespace DataLayer
         {
             try
             {
-                IQueryable<User> query = dbContext.Users;
+                IQueryable<User> query = _appDbContext.Users;
 
                 if (useNavigationalProperties)
                 {
@@ -79,7 +79,7 @@ namespace DataLayer
             }
         }
 
-        public async Task DeleteAsync(int key)
+        public async Task DeleteAsync(string key)
         {
             try
             {
@@ -87,11 +87,11 @@ namespace DataLayer
 
                 if (userFromDb is null)
                 {
-                    throw new ArgumentException("Author with that Id does not exist!");
+                    throw new ArgumentException("User with that Id does not exist!");
                 }
 
-                dbContext.Users.Remove(userFromDb);
-                await dbContext.SaveChangesAsync();
+                _appDbContext.Users.Remove(userFromDb);
+                await _appDbContext.SaveChangesAsync();
             }
             catch (Exception)
             {
@@ -103,14 +103,14 @@ namespace DataLayer
         {
             try
             {
-                User userFromDb = await ReadAsync(item.Id, useNavigationalProperties, false);
+                User userFromDb = await ReadAsync(item.Id,false, false);
 
                 if (userFromDb == null)
                 {
                     await CreateAsync(item);
                 }
 
-                dbContext.Entry(userFromDb).CurrentValues.SetValues(item);
+                _appDbContext.Entry(userFromDb).CurrentValues.SetValues(item);
 
                 if (useNavigationalProperties)
                 {
@@ -118,7 +118,7 @@ namespace DataLayer
 
                     foreach (var course in item.Courses)
                     {
-                        Course courseFromDb = await dbContext.Courses.FindAsync(course.Id);
+                        Course courseFromDb = await _appDbContext.Courses.FindAsync(course.Id);
 
                         if (courseFromDb is null)
                         {
@@ -133,7 +133,7 @@ namespace DataLayer
                     userFromDb.Courses = courses;
                 }
 
-                await dbContext.SaveChangesAsync();
+                await _appDbContext.SaveChangesAsync();
             }
             catch (Exception)
             {

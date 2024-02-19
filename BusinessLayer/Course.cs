@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BusinessLayer
 {
@@ -22,10 +18,10 @@ namespace BusinessLayer
         public string Description { get; set; }
 
         [ForeignKey("User")]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         [Required]
-        public User _User { get; set; }
+        public User User { get; set; }
 
         public Course()
         {
@@ -33,9 +29,10 @@ namespace BusinessLayer
         }
         public Course(string name, string description, User user)
         {
+            this.UserId = user.Id;
             this.Name = name;
             this.Description = description;
-            this._User = user;
+            this.User = user;
         }
     }
 }

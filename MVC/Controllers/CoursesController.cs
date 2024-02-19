@@ -12,10 +12,10 @@ namespace MVC.Controllers
 {
     public class CoursesController : Controller
     {
-        private readonly LearnWizardDBContext _context;
+        private readonly LearnWizardAppDbContext _context;
         private readonly CourseContext _courseContext;
 
-        public CoursesController(LearnWizardDBContext context, CourseContext courseContext)
+        public CoursesController(LearnWizardAppDbContext context, CourseContext courseContext)
         {
             _context = context;
             _courseContext = courseContext;
@@ -24,7 +24,7 @@ namespace MVC.Controllers
         // GET: Courses
         public async Task<IActionResult> Index()
         {
-            //var learnWizardDBContext = _context.Courses.Include(c => c._User);
+            //var LearnWizardAppDbContext = _context.Courses.Include(c => c._User);
             return View(await _courseContext.ReadAllAsync());
         }
 
@@ -37,7 +37,7 @@ namespace MVC.Controllers
             }
 
             var course = await _context.Courses
-                .Include(c => c._User)
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (course == null)
             {
@@ -61,7 +61,7 @@ namespace MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Description,UserId")] Course course)
         {
-            course._User = await _context.Users.FindAsync(course.UserId);
+            course.User = await _context.Users.FindAsync(course.UserId);
             ModelState.Clear();
             
 
@@ -136,7 +136,7 @@ namespace MVC.Controllers
             }
 
             var course = await _context.Courses
-                .Include(c => c._User)
+                .Include(c => c.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (course == null)
             {

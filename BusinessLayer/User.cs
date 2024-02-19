@@ -12,7 +12,6 @@ namespace BusinessLayer
         {
             Courses = new List<Course>();
             Id = Guid.NewGuid().ToString();
-            Courses = new List<Course>();
         }
 
         public User(string username ,string email, int age)

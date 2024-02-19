@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public interface IDb<T, K> where K : IConvertible
+    public interface IDb<T, TK> where TK : IConvertible
     {
         Task CreateAsync(T item);
 
-        Task<T> ReadAsync(K key, bool useNavigationalProperties = false, bool isReadOnly = true);
+        Task<T> ReadAsync(TK key, bool useNavigationalProperties = false, bool isReadOnly = true);
 
         Task<ICollection<T>> ReadAllAsync(bool useNavigationalProperties = false, bool isReadOnly = true);
 
         Task UpdateAsync(T item, bool useNavigationalProperties = false, bool isReadOnly = true);
 
-        Task DeleteAsync(K key);
+        Task DeleteAsync(TK key);
     }
 }

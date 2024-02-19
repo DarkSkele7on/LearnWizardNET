@@ -9,19 +9,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c06822-e004-4f34-95cb-2baf6cf89152" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DataLayer/IdentityContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Views/Home/Error.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLayer/BusinessLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLayer/BusinessLayer.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20240216092205_Initial.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20240216092205_Initial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/LearnWizardAppDbContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Login.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Login.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Logout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Logout.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/ResetPassword.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/ResetPassword.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Views/Home/Shared/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServiceLayer/Api.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServiceLayer/ServiceLayer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLayer/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLayer/Course.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BusinessLayer/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLayer/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLayer/LearnWizardDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/LearnWizardDBContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Controllers/AccountController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/CourseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/CourseContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/DataLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/DataLayer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/IDb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/IDb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/IdentityContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/LearnWizardDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/LearnWizardAppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240124140251_joro1.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240124140251_joro1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240125131706_course1.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240125131706_course1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240125135828_joro2.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240125135828_joro2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240125205913_joro3.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240125205913_joro3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240126145656_root.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/20240126145656_root.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/LearnWizardDBContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/UserContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/UserContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LearnWizardNET.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LearnWizardNET.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Controllers/CoursesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/CoursesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/LoginController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Controllers/RegisterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/RegisterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/MVC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/MVC.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Home/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Shared/_Layout.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/Shared/_Layout.cshtml.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,45 +80,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6d458413-df07-4c6f-a21e-1b4661de1d67" />
+        <option name="url" value="https://github.com/DarkSkele7on/LearnWizardNET.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Downloads/Library11J-2/DataLayer/IdentityContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J-2/MVCApplication/Areas/Identity/Pages/Account/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J-2/MVCApplication/Areas/Identity/Pages/Account/Register.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J-2/MVCApplication/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J-2/MVCApplication/Views/Shared/_LoginPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J-2/ServiceLayer/IdentityManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J/BusinessLayer/Book.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/BusinessLayer/Customer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J/BusinessLayer/Order.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J/DataLayer/CustomerContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J/DataLayer/IDb.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J/DataLayer/IdentityContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/DataLayer/LibraryDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Areas/Identity/Pages/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Areas/Identity/Pages/Account/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Areas/Identity/Pages/Account/Register.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9d4222221a8b463d84022c8257b0d1be267c18/b3/9fb1b4a9/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3e3d2e20cb34e39b35fad66e3c18118b0a0/cb/b284d060/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/antonmalchev/Projects/LearnWizardNET/MVC/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MVC/Views/Home/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2cG7PcB1myzdMplNqk0Vr6ExcNK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.MVC: http.executor": "Run",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
+      "sqlserver",
+      "azure",
       "mysql"
     ],
     "rider.external.source.directories": [
@@ -82,7 +165,6 @@
   <component name="RiderProblemsViewState">
     <hideBySeverity>
       <option value="20" />
-      <option value="300" />
     </hideBySeverity>
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.MVC: http">
@@ -125,14 +207,50 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707726039124</updated>
-      <workItem from="1707726041016" duration="3299000" />
+      <workItem from="1707726041016" duration="12535000" />
+      <workItem from="1707906099335" duration="15836000" />
     </task>
+    <task id="LOCAL-00001" summary="Identity">
+      <option name="closed" value="true" />
+      <created>1707729547687</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707729547687</updated>
+    </task>
+    <task id="LOCAL-00002" summary="unresolved">
+      <option name="closed" value="true" />
+      <created>1707729560143</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707729560143</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tmp">
+      <option name="closed" value="true" />
+      <created>1708076643184</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708076643184</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Identity" />
+    <MESSAGE value="unresolved" />
+    <MESSAGE value="tmp" />
+    <option name="LAST_COMMIT_MESSAGE" value="tmp" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

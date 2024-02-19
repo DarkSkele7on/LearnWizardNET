@@ -1,8 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using Microsoft.AspNetCore.Identity
 <html lang="en">
 <head>
     <link rel="stylesheet" href="~/css/register.css">
@@ -12,7 +8,7 @@
     <section class="register">
         <div class="register-container">
             <h2>Register</h2>
-            <form id="register-form" action="/Account/Register" method="post">
+            <form id="register-form" asp-area="Identity" asp-page="/Account/Register">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="Name" required>
