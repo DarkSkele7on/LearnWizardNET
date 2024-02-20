@@ -12,6 +12,14 @@
     <EmbeddedResource Remove="wwwroot\lib\**" />
     <None Remove="wwwroot\lib\**" />
     <Content Remove="Views\Home\Login.cshtml" />
+    <Content Remove="Views\Home\Register.cshtml" />
+    <Compile Update="Areas\Identity\Pages\Account\Manage.cs">
+      <DependentUpon>Manage.cshtml</DependentUpon>
+    </Compile>
+    <Compile Remove="Views\Home\Shared\**" />
+    <EmbeddedResource Remove="Views\Home\Shared\**" />
+    <Content Remove="Views\Home\Shared\**" />
+    <None Remove="Views\Home\Shared\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,17 +49,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Views\Home\_Layout.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <AdditionalFiles Include="Views\Home\Shared\_Layout.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <_ContentIncludedByDefault Remove="Views\Identity\Register_.cshtml" />
     <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Login.cshtml" />
     <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
@@ -61,6 +58,7 @@
     <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
     <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewImports.cshtml" />
     <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Home\Shared\_Layout.cshtml" />
   </ItemGroup>
 
 </Project>
