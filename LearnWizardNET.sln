@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC", "MVC\MVC.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{D75B663A-DC76-41AB-B3DE-C4063B25B156}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeedingLayer", "SeedingLayer\SeedingLayer.csproj", "{AFEEB7FF-E1D0-4A95-BF7A-4BA9933D8778}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D75B663A-DC76-41AB-B3DE-C4063B25B156}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D75B663A-DC76-41AB-B3DE-C4063B25B156}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D75B663A-DC76-41AB-B3DE-C4063B25B156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFEEB7FF-E1D0-4A95-BF7A-4BA9933D8778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEEB7FF-E1D0-4A95-BF7A-4BA9933D8778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEEB7FF-E1D0-4A95-BF7A-4BA9933D8778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEEB7FF-E1D0-4A95-BF7A-4BA9933D8778}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

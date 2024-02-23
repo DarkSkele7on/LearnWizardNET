@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@localhost" uuid="7f31746e-f3f0-4862-aa8f-9de55164f6cf">
-      <driver-ref>azure.ms</driver-ref>
+    <data-source source="LOCAL" name="LearnWizard@localhost" uuid="880a3330-d81a-47eb-9f3d-0313f645378e">
+      <driver-ref>sqlserver.jb</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://localhost</jdbc-url>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
+      <jdbc-url>Server=localhost,1433;Database=LearnWizard;User=sa;Password=Zamunda06;Encrypt=True;TrustServerCertificate=True;</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
-      <driver-properties>
-        <property name="trustServerCertificate" value="true" />
-      </driver-properties>
     </data-source>
   </component>
 </project>

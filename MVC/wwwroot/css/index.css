@@ -29,12 +29,4 @@
     max-width: 50%; /* Adjust if necessary for dynamic scaling */
 }
 
-.cta-button {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    font-size: calc(14px + (18 - 14) * ((100vw - 400px) / (1200 - 400))); /* Scale font size dynamically */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: opacity 0.5s;
-}
+

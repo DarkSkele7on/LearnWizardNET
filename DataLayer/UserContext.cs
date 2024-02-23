@@ -35,7 +35,7 @@ namespace DataLayer
             try
             {
                 IQueryable<User> query = _appDbContext.Users;
-
+                
                 if (useNavigationalProperties)
                 {
                     query = query.Include(a => a.Courses);
@@ -46,7 +46,7 @@ namespace DataLayer
                     query = query.AsNoTrackingWithIdentityResolution();
                 }
 
-                return await query.FirstOrDefaultAsync(u=>u.Id == key);
+                return await query.FirstOrDefaultAsync(a => a.Id == key);
             }
             catch (Exception)
             {
@@ -54,8 +54,7 @@ namespace DataLayer
             }
         }
 
-        public async Task<ICollection<User>> ReadAllAsync(bool useNavigationalProperties = false,
-            bool isReadOnly = true)
+        public async Task<ICollection<User>> ReadAllAsync(bool useNavigationalProperties = false, bool isReadOnly = true)
         {
             try
             {
@@ -70,7 +69,7 @@ namespace DataLayer
                 {
                     query = query.AsNoTrackingWithIdentityResolution();
                 }
-
+                
                 return await query.ToListAsync();
             }
             catch (Exception)

@@ -7,22 +7,27 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BusinessLayer;
 using DataLayer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace MVC.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class UsersController : Controller
     {
-        private readonly LearnWizardAppDbContext _context;
-
-        public UsersController(LearnWizardAppDbContext context)
+        private readonly IdentityContext _identityContext;
+        private readonly UserManager<User> _userManager;
+    
+        public UsersController(IdentityContext identityContext, UserManager<User> userManager)
         {
-            _context = context;
+            _identityContext = identityContext;
+            _userManager = userManager;
         }
-
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Users.ToListAsync());
+            var users = await _identityContext.ReadAllUsersAsync();
+            return View(users);
         }
 
         // GET: Users/Details/5
@@ -33,9 +38,7 @@ namespace MVC.Controllers
                 return NotFound();
             }
 
-            var user = await _context.Users
-                .Include(u => u.Courses)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var user = await _identityContext.ReadUserAsync(id, useNavigationalProperties: true);
             if (user == null)
             {
                 return NotFound();
@@ -50,31 +53,33 @@ namespace MVC.Controllers
             return View();
         }
 
-        // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserName,Email,BirtDate")] User user)
+        public async Task<IActionResult> Create([Bind("UserName,Email,PasswordHash,Age")] User user)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(user);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                // Create user using IdentityContext
+                var result = await _identityContext.CreateUserAsync(user.UserName, user.PasswordHash, user.Email, user.Age, Role.User);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+
+                return new ContentResult() { Content = result.ToString() };
             }
             return View(user);
         }
 
         // GET: Users/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var user = await _context.Users.FindAsync(id);
+            var user = await _identityContext.ReadUserAsync(id);
             if (user == null)
             {
                 return NotFound();
@@ -82,12 +87,9 @@ namespace MVC.Controllers
             return View(user);
         }
 
-        // POST: Users/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Age,Courses")] User user)
+        public async Task<IActionResult> Edit(string id, [Bind("Id,UserName,EmailAge,Courses")] User user)
         {
             if (id != user.Id)
             {
@@ -98,19 +100,11 @@ namespace MVC.Controllers
             {
                 try
                 {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
+                    await _identityContext.UpdateUserAsync(id, user.UserName, user.Age);
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception)
                 {
-                    if (!UserExists(user.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    return NotFound();
                 }
                 return RedirectToAction(nameof(Index));
             }
@@ -125,8 +119,7 @@ namespace MVC.Controllers
                 return NotFound();
             }
 
-            var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var user = await _identityContext.ReadUserAsync(id);
             if (user == null)
             {
                 return NotFound();
@@ -135,24 +128,27 @@ namespace MVC.Controllers
             return View(user);
         }
 
-        // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
+            try
             {
-                _context.Users.Remove(user);
+                await _identityContext.DeleteUserByIdAsync(id);
+                return RedirectToAction(nameof(Index));
             }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool UserExists(string id)
-        {
-            return _context.Users.Any(e => e.Id == id);
+            catch (InvalidOperationException ex)
+            {
+                // Handle the case where the user is not found
+                // For example, you can redirect to an error page or return a specific view
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions
+                // For example, you can log the exception and return a generic error view
+                return View("Index");
+            }
         }
     }
 }

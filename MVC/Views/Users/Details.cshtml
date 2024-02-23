@@ -3,42 +3,60 @@
 @{
     ViewData["Title"] = "Details";
 }
-
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/UserDetails.css">
+    <title>Learn Wizard - Home</title>
+</head>
+<headerhh>
 <h1>Details</h1>
-
-<div>
-    <h4>User</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Age)
-        </dd>
-
-
-        <dt class="col-sm-2">
-            Courses
-        </dt>
-        <dd class="col-sm-10">
-            @string.Join(", ", Model.Courses.Select(b => b.Name))
-        </dd>
-    </dl>
-</div>
+<h4>User</h4>
+</headerhh>
+<body>
+<main>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Username
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Age
+                </th>
+                <th>
+                    Courses
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.UserName)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(model => model.Email)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(model => model.Age)
+                </td>
+                
+                <td>
+                    @string.Join(", ", Model.Courses.Select(b => b.Name))
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+</body>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LearnWizard.Managers;
 
 namespace LearnWizard
 {
@@ -30,12 +31,14 @@ namespace LearnWizard
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddRazorPages(); // For Identity!
+            services.AddRazorPages();
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddScoped<LearnWizardAppDbContext, LearnWizardAppDbContext>();
             services.AddScoped<UserContext, UserContext>();
             services.AddScoped<CourseContext, CourseContext>();
+            services.AddScoped<IEmailSender, EmailSenderManager>();
+            services.AddScoped<IdentityContext, IdentityContext>();
 
             
             services.AddDbContext<LearnWizardAppDbContext>(op =>

@@ -1,0 +1,46 @@
+/* EditUser.css */
+headerhh {
+    background-color: #333333;
+    color: #fff;
+
+    text-align: left;
+}
+/* Main content styling */
+main {
+    padding: 20px;
+}
+/* Header styling */
+h1 {
+    text-align: center;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.input-error {
+    color: red;
+}
+
+
+/* Back to List link */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

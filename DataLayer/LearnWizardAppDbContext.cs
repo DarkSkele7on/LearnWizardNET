@@ -13,8 +13,10 @@ namespace DataLayer
 {
     public class LearnWizardAppDbContext : IdentityDbContext<User>
     {
-        // public LearnWizardAppDbContext() : base() { }
+        public LearnWizardAppDbContext() : base()
+        {
 
+        }
         public LearnWizardAppDbContext(DbContextOptions options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,9 +30,10 @@ namespace DataLayer
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("User");
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<User>().Property(c => c.UserName).IsRequired();
+            modelBuilder.Entity<User>().Property(c => c.Email).IsRequired();
             
+            base.OnModelCreating(modelBuilder);
         }
         public DbSet<Course> Courses { get; set; }
     }

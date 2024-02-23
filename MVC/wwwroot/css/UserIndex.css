@@ -1,0 +1,31 @@
+
+headerhh {
+    background-color: #333;
+    color: #fff;
+
+    text-align: left;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #333;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    color: #fff; 
+}
+
+.table th {
+    background-color: #555; 
+}
