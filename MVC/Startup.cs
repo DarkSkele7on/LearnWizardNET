@@ -1,22 +1,12 @@
 using BusinessLayer;
 using DataLayer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using LearnWizard.Managers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using LearnWizard.Managers;
+using ServiceLayer;
 
-namespace LearnWizard
+namespace MVC
 {
     public class Startup
     {
@@ -39,12 +29,13 @@ namespace LearnWizard
             services.AddScoped<CourseContext, CourseContext>();
             services.AddScoped<IEmailSender, EmailSenderManager>();
             services.AddScoped<IdentityContext, IdentityContext>();
+            services.AddSingleton<OpenApi>(new OpenApi("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"));
 
             
             services.AddDbContext<LearnWizardAppDbContext>(op =>
             {
                 op.UseSqlServer("Server=localhost,1433;Database=LearnWizard;User=sa;Password=Zamunda06;Encrypt=True;TrustServerCertificate=True;");
-            }, ServiceLifetime.Scoped);
+            });
 
             services.AddIdentity<User, IdentityRole>(iop =>
             {

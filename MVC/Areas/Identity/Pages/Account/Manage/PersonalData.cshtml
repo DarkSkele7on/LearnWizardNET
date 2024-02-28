@@ -1,0 +1,27 @@
+﻿@page
+@model PersonalDataModel
+@{
+    ViewData["Title"] = "DELETE ACCOUNT";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+<head>
+    <link rel="stylesheet" href="~/css/login.css"> <!-- Linking the login.css -->
+</head>
+
+
+<div class="login">
+    <section class="login-container">
+    <h2>@ViewData["Title"]</h2>
+    
+    <h2>
+        <strong>This will PERMANENTLY REMOVE your account, and CANNOT be recovered.</strong>
+    </h2>
+    <p>
+        <a id="delete" asp-page="DeletePersonalData" class="button">Delete</a>
+    </p>
+</section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

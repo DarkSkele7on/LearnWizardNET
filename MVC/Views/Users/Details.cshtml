@@ -5,12 +5,12 @@
 }
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="~/css/UserDetails.css">
-    <title>Learn Wizard - Home</title>
+    <link rel="stylesheet" href="~/css/UserIndex.css"> <!-- Linking the login.css -->
+    <title>Edit User</title>
 </head>
 <headerhh>
-<h1>Details</h1>
-<h4>User</h4>
+    <h1>User | @Html.DisplayFor(model => model.UserName) | Details</h1>
+
 </headerhh>
 <body>
 <main>
@@ -54,8 +54,8 @@
 </main>
 </body>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="cta-button" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a class="cta-button" asp-action="Index">Back to List</a>
 </div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

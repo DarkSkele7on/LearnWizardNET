@@ -22,11 +22,11 @@ namespace DataLayer
         {
             try
             {
-                User authorFromDb = await _appDbContext.Users.FindAsync(item.Id);
+                User userFromDb = await _appDbContext.Users.FindAsync(item.User.Id);
 
-                if (authorFromDb != null)
+                if (userFromDb != null)
                 {
-                    item.User = authorFromDb;
+                    item.User = userFromDb;
                 }
 
                 _appDbContext.Courses.Add(item);
@@ -111,10 +111,10 @@ namespace DataLayer
         {
             try
             {
-                Course coursekFromDb = await ReadAsync(item.Id, useNavigationalProperties, false);
+                Course coursesFromDb = await ReadAsync(item.Id, useNavigationalProperties, false);
 
-                coursekFromDb.Name = item.Name;
-                coursekFromDb.Description = item.Description;
+                coursesFromDb.Name = item.Name;
+                coursesFromDb.Description = item.Description;
 
                 if (useNavigationalProperties)
                 {
@@ -122,11 +122,11 @@ namespace DataLayer
 
                     if (userFromDb != null)
                     {
-                        coursekFromDb.User = userFromDb;
+                        coursesFromDb.User = userFromDb;
                     }
                     else
                     {
-                        coursekFromDb.User = item.User;
+                        coursesFromDb.User = item.User;
                     }
                 }
 

@@ -7,6 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BusinessLayer;
 using DataLayer;
+using Google.Protobuf.WellKnownTypes;
+using Microsoft.AspNetCore.Identity;
+using MVC.Models;
+using ServiceLayer;
+
+
 
 namespace MVC.Controllers
 {
@@ -14,11 +20,14 @@ namespace MVC.Controllers
     {
         private readonly LearnWizardAppDbContext _context;
         private readonly CourseContext _courseContext;
-
-        public CoursesController(LearnWizardAppDbContext context, CourseContext courseContext)
+        private readonly OpenApi _api;
+        private readonly UserManager<User> _userManager;
+        public CoursesController(LearnWizardAppDbContext context, CourseContext courseContext, OpenApi api, UserManager<User> userManager)
         {
             _context = context;
             _courseContext = courseContext;
+            _api = api;
+            _userManager = userManager;
         }
 
         // GET: Courses
@@ -59,18 +68,38 @@ namespace MVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,UserId")] Course course)
+        public async Task<IActionResult> Create([Bind("Id,Name")] Course course)
         {
-            course.User = await _context.Users.FindAsync(course.UserId);
-            ModelState.Clear();
-            
+            // Check if the user is authenticated
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index","Home"); 
+            }
 
+            // Retrieve the user asynchronously
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("Error", "Home"); // Redirect to an error page
+            }
+
+            course.User = user;
+            course.UserId = course.User.Id;
+            var _description = await _api.GenerateCourseDescriptionAsync(course.Name);
+            course.Description = _description;
+
+            // Clear model state
+            ModelState.Clear();
+
+            // Try to update the model asynchronously
             if (await TryUpdateModelAsync(course))
             {
-                await _courseContext.CreateAsync(course); // Using CourseContext here
+                // Save the course asynchronously
+                await _courseContext.CreateAsync(course);
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email", course.UserId);
+
+            // If model update fails, prepare the ViewData and return the view
             return View(course);
         }
 

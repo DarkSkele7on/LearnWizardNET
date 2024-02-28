@@ -3,44 +3,42 @@
 @{
     ViewData["Title"] = "Edit";
 }
+
 <head>
-    <link rel="stylesheet" href="~/css/UserEdit.css">
+    <link rel="stylesheet" href="~/css/login.css"> <!-- Linking the login.css -->
+    <title>Edit User</title>
 </head>
-<headerhh>
-<h1>Edit</h1>
-<h4>User</h4>
-</headerhh>
-<main>
-    <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id"/>
+
+<div class="login-container"> <!-- Adding login-container class -->
+    <section class="login">
+        <form id="login-form" asp-action="Edit" method="post"> <!-- Adding asp-action attribute -->
+            <h2>Edit User</h2>
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control"/>
+                <label asp-for="UserName" class="form-label">Username</label> <!-- Adding form-label class -->
+                <input asp-for="UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="username"/>
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control"/>
+                <label asp-for="Email" class="form-label">Email</label> <!-- Adding form-label class -->
+                <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Age" class="control-label"></label>
-                <input asp-for="Age" class="form-control"/>
+                <label asp-for="Age" class="form-label">Age</label> <!-- Adding form-label class -->
+                <input asp-for="Age" class="form-control" />
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary"/>
+            <div>
+                <button class="button">Save</button>
+                <a asp-action="Index" class="cta-button">Back to List</a>
             </div>
         </form>
-    </div>
-    </div>
-</main>
-<div>
-    <a asp-action="Index">Back to List</a>
+    </section>
 </div>
+
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -3,8 +3,8 @@
 }
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="~/css/index.css">
-    <title>Learn Wizard - Home</title>
+    <link rel="stylesheet" href="~/css/index.css"> <!-- Linking the login.css -->
+    <title>Edit User</title>
 </head>
 <body>
     <section id="hero" class="hero">
@@ -14,7 +14,7 @@
                 <p><span id="paragraph-text"></span></p>
             </div>
             <script src="~/js/typewriter.js"></script>
-            <a href="About" id="cta-button" class="cta-button">Learn More</a>
+            <a asp-controller="About" asp-action="Index" id="cta-button" class="cta-button">Learn More</a>
         </div>
         <img src="~/resources/wizard.jpg" alt="Learn Wizard" class="hero-image">
     </section>

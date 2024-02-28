@@ -43,21 +43,6 @@ textarea {
     color: #fff;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #999;
-}
-
 .contact p {
     font-size: 16px;
     margin-top: 10px;
@@ -89,7 +74,7 @@ button:hover {
     max-width: 80%;
     margin: auto; /* Adjust margin for positioning */
     color: #fff;
-
+    width: 800px;
 }
 
 /* Adjust contact icon styles to indicate clickability */

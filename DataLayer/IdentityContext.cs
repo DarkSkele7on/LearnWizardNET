@@ -120,7 +120,7 @@ namespace DataLayer
             }
         }
 
-        public async Task UpdateUserAsync(string id, string username, int age)
+        public async Task UpdateUserAsync(string id, string email, string username, int age)
         {
             try
             {
@@ -128,7 +128,9 @@ namespace DataLayer
                 {
                     User user = await context.Users.FindAsync(id);
                     user.UserName = username;
+                    user.Email = email;
                     user.Age = age;
+                    
                     await userManager.UpdateAsync(user);
                 }
             }

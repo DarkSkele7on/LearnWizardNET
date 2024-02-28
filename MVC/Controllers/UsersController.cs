@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using BusinessLayer;
-using DataLayer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using DataLayer;
+using BusinessLayer;
 
 namespace MVC.Controllers
 {
@@ -17,20 +13,18 @@ namespace MVC.Controllers
     {
         private readonly IdentityContext _identityContext;
         private readonly UserManager<User> _userManager;
-    
+
         public UsersController(IdentityContext identityContext, UserManager<User> userManager)
         {
             _identityContext = identityContext;
             _userManager = userManager;
         }
-        // GET: Users
+
         public async Task<IActionResult> Index()
         {
             var users = await _identityContext.ReadAllUsersAsync();
             return View(users);
         }
-
-        // GET: Users/Details/5
         public async Task<IActionResult> Details(string? id)
         {
             if (id == null)
@@ -39,15 +33,10 @@ namespace MVC.Controllers
             }
 
             var user = await _identityContext.ReadUserAsync(id, useNavigationalProperties: true);
-            if (user == null)
-            {
-                return NotFound();
-            }
 
             return View(user);
         }
 
-        // GET: Users/Create
         public IActionResult Create()
         {
             return View();
@@ -59,19 +48,25 @@ namespace MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Create user using IdentityContext
-                var result = await _identityContext.CreateUserAsync(user.UserName, user.PasswordHash, user.Email, user.Age, Role.User);
-                if (result.Succeeded)
+                if (user.UserName != null)
                 {
-                    return RedirectToAction(nameof(Index));
+                    if (user.PasswordHash != null)
+                    {
+                        if (user.Email != null)
+                        {
+                            var result = await _identityContext.CreateUserAsync(user.UserName, user.PasswordHash, user.Email, user.Age, Role.User);
+                            if (result.Succeeded)
+                            {
+                                return RedirectToAction(nameof(Index));
+                            }
+                            return BadRequest(result.Errors);
+                        }
+                    }
                 }
-
-                return new ContentResult() { Content = result.ToString() };
             }
             return View(user);
         }
 
-        // GET: Users/Edit/5
         public async Task<IActionResult> Edit(string? id)
         {
             if (id == null)
@@ -89,7 +84,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,UserName,EmailAge,Courses")] User user)
+        public async Task<IActionResult> Edit(string id, [Bind("Id,UserName,Email,Age,Courses")] User user)
         {
             if (id != user.Id)
             {
@@ -100,7 +95,9 @@ namespace MVC.Controllers
             {
                 try
                 {
-                    await _identityContext.UpdateUserAsync(id, user.UserName, user.Age);
+                    if (user.Email != null)
+                        if (user.UserName != null)
+                            await _identityContext.UpdateUserAsync(id, user.Email, user.UserName, user.Age);
                 }
                 catch (Exception)
                 {
@@ -111,7 +108,6 @@ namespace MVC.Controllers
             return View(user);
         }
 
-        // GET: Users/Delete/5
         public async Task<IActionResult> Delete(string? id)
         {
             if (id == null)
@@ -137,17 +133,13 @@ namespace MVC.Controllers
                 await _identityContext.DeleteUserByIdAsync(id);
                 return RedirectToAction(nameof(Index));
             }
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException)
             {
-                // Handle the case where the user is not found
-                // For example, you can redirect to an error page or return a specific view
                 return NotFound();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // Handle other exceptions
-                // For example, you can log the exception and return a generic error view
-                return View("Index");
+                return StatusCode(500); // Internal Server Error
             }
         }
     }

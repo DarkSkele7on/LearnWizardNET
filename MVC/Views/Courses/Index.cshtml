@@ -3,12 +3,16 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
+<head>
+    <link rel="stylesheet" href="~/css/UserIndex.css"> <!-- Linking the login.css -->
+    <title>Edit User</title>
+</head>
+<h1>My Courses</h1>
+<br/>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="cta-button" asp-action="Create">Create New</a>
 </p>
+<br/>
 <table class="table">
     <thead>
         <tr>
@@ -17,9 +21,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
             </th>
             <th></th>
         </tr>
@@ -34,12 +35,10 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.User.Email)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="cta-button" asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                <br/>
+                <br/>
+                <a class="cta-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

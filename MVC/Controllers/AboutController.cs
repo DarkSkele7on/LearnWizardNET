@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
-namespace MVC.Controllers
+namespace MVC.Controllers;
+
+public class AboutController : Controller
 {
-    public class AboutController : Controller
+    [HttpGet]
+    public IActionResult Index()
     {
-        [HttpGet]
-        [Route("About")]
-        public IActionResult Index()
-        {
-            return View("~/Views/Home/About.cshtml");
-        }
+        return View("~/Views/Home/About.cshtml");
     }
 }

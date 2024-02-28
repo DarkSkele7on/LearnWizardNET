@@ -5,47 +5,50 @@
 }
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="~/css/UserIndex.css">
-    <title>Learn Wizard - Home</title>
+    <link rel="stylesheet" href="~/css/UserIndex.css"> <!-- Linking the login.css -->
+    <title>Edit User</title>
 </head>
+
+<headerhh>
+    <h1>User Management</h1>
+</headerhh>
+    <a class="cta-button" asp-action="Create">Create New User</a>
+
 <body>
-    <headerhh>
-            <h1>User Management</h1>
-            <a class="cta-button" asp-action="Create">Create New User</a>
-            </headerhh>
     <main>
-    <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                            Username
-                        </th>
-                        <th>
-                            Email
-                        </th>
-                        <th>
-                            Age
-                        </th>
-                        <th>
-                            Actions
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model) {
-                        <tr>
-                            <td>@Html.DisplayFor(modelItem => item.UserName)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Age)</td>
-                            <td>
-                                <a class="cta-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                                <a class="cta-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
-                                <a class="cta-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    Username
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Age
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Age)</td>
+                    <td>
+                        <a class="cta-button" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="cta-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a class="cta-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
     </main>
 </body>
 </html>

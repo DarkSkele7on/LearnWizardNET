@@ -4,54 +4,67 @@
     <projectFile profileName="http">MVC/MVC.csproj</projectFile>
     <projectFile profileName="https">MVC/MVC.csproj</projectFile>
     <projectFile>SeedingLayer/SeedingLayer.csproj</projectFile>
+    <projectFile>ServiceLayer/ServiceLayer.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c06822-e004-4f34-95cb-2baf6cf89152" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BusinessLayer/Role.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/IdentityContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataLayer/IdentityResultSet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Managers/EmailSenderManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/wwwroot/css/UserDetails.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/wwwroot/css/UserEdit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/wwwroot/css/UserIndex.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SeedingLayer/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SeedingLayer/SeedingLayer.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServiceLayer/IdentityUserManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Email.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Email.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServiceLayer/OpenApi.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLayer/LearnWizardAppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/LearnWizardAppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLayer/UserContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/UserContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/CourseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/CourseContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/IdentityContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/IdentityContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LearnWizardNET.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LearnWizardNET.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Login.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Login.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Login.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/_ViewImports.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/_ViewImports.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Logout.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Logout.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Controllers/AboutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/AboutController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Controllers/ContactController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/ContactController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Controllers/CoursesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/CoursesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/UsersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/MVC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/MVC.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/About.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/Contact.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/Contact.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Shared/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Delete.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Details.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/show_q.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/site.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceLayer/Api.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ServiceLayer/ServiceLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceLayer/ServiceLayer.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +113,8 @@
     <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Areas/Identity/Pages/Account/Register.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b5e9c4cb40043b6a8ecec4e15fa5bea2b6a0/fd/f8e6fec1/IdentityResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87bed8ddb3a8426686194432a8407b75d82200/f1/7a309a2c/Monitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9912e9dd155f4f90886f876f6d33c93fc908/5c/8c2e7c71/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9d4222221a8b463d84022c8257b0d1be267c18/b3/9fb1b4a9/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3e3d2e20cb34e39b35fad66e3c18118b0a0/52/c0597520/IdentityUser`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3e3d2e20cb34e39b35fad66e3c18118b0a0/cb/b284d060/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
@@ -133,6 +148,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "XThreadsFramesViewSplitterKey": "0.5197368",
     "git-widget-placeholder": "master",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -140,7 +156,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
+    "settings.editor.selected.configurable": "HotReloadSettingsPage",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -171,6 +187,24 @@
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/SeedingLayer/SeedingLayer.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="ServiceLayer" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ServiceLayer/ServiceLayer.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -221,7 +255,11 @@
       <updated>1707726039124</updated>
       <workItem from="1707726041016" duration="12535000" />
       <workItem from="1707906099335" duration="25724000" />
-      <workItem from="1708412944982" duration="34067000" />
+      <workItem from="1708412944982" duration="35368000" />
+      <workItem from="1708712503716" duration="2717000" />
+      <workItem from="1708925744533" duration="18362000" />
+      <workItem from="1709017854074" duration="8279000" />
+      <workItem from="1709098426807" duration="6172000" />
     </task>
     <task id="LOCAL-00001" summary="Identity">
       <option name="closed" value="true" />
@@ -263,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708415284122</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="improvements1">
+      <option name="closed" value="true" />
+      <created>1708682813779</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708682813780</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,20 +335,21 @@
     <MESSAGE value="tmp" />
     <MESSAGE value="initial132" />
     <MESSAGE value="Identity2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Identity2" />
+    <MESSAGE value="improvements1" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvements1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataLayer/IdentityContext.cs</url>
-          <line>144</line>
+          <line>146</line>
           <properties documentPath="$PROJECT_DIR$/DataLayer/IdentityContext.cs" initialLine="144" containingFunctionPresentation="Method 'DeleteUserByNameAsync'">
             <startOffsets>
-              <option value="4399" />
+              <option value="4474" />
             </startOffsets>
             <endOffsets>
-              <option value="4450" />
+              <option value="4525" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />

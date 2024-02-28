@@ -40,20 +40,6 @@ input {
     color: #fff;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #999;
-}
 
 .login p {
     font-size: 16px;
