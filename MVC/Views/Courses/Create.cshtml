@@ -1,31 +1,66 @@
-﻿@model BusinessLayer.Course
+﻿@using BusinessLayer
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model BusinessLayer.Course
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Course";
 }
 
-<h1>Create</h1>
+<head>
+    <link rel="stylesheet" href="~/css/login.css"> <!-- Ensure this CSS link is correct -->
+    <title>Create Course</title>
+</head>
 
-<h4>Course</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label">Prompt</label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="login-container">
+    <div class="login">
+        <main>
+            <h2 style="text-align: center">@ViewData["Title"]</h2>
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="form-group">
+                    <label asp-for="Name" class="form-label">Course Name</label>
+                    <input asp-for="Name" class="form-control" placeholder="Enter course name"/>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="ExpertiseLevel" class="form-label">Current level of expertise</label>
+                    <select asp-for="ExpertiseLevel" class="form-control" asp-items="Html.GetEnumSelectList<ExpertiseLevel>()"></select>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="LearningGoals" class="form-label">Main goals/objectives for the course</label>
+                    <input asp-for="LearningGoals" class="form-control" placeholder="Describe your learning goals"></input>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="LearningStyle" class="form-label">Preferred learning style</label>
+                    <select asp-for="LearningStyle" class="form-control" asp-items="Html.GetEnumSelectList<LearningStyle>()"></select>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="ContentPreferences" class="form-label">Preferred content type</label>
+                    <select asp-for="ContentPreferences" class="form-control">
+                        <option value="Theoretical">Theoretical</option>
+                        <option value="Practical">Practical</option>
+                        <option value="Mixed">Mixed</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="SupportNeeds" class="form-label">Any additional support needed</label>
+                    <input asp-for="SupportNeeds" class="form-control" placeholder="Specify any support needs"/>
+                </div>
+                
+                <div style="display: flex; justify-content: center;">
+                    <button type="submit" class="button">Create</button>
+                </div>
+            </form>
+        </main>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

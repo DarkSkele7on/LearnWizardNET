@@ -5,67 +5,96 @@
     <projectFile profileName="https">MVC/MVC.csproj</projectFile>
     <projectFile>SeedingLayer/SeedingLayer.csproj</projectFile>
     <projectFile>ServiceLayer/ServiceLayer.csproj</projectFile>
+    <projectFile>TestingLayer/TestingLayer.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57c06822-e004-4f34-95cb-2baf6cf89152" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Email.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Email.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServiceLayer/OpenApi.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20240422082946_personalised.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20240422082946_personalised.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20240422083326_personalised1.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20240422083326_personalised1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20240422102545_personalised2.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataLayer/Migrations/20240422102545_personalised2.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestingLayer/Base/BaseTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestingLayer/Pages/HomePage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestingLayer/Pages/LoginPage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestingLayer/Pages/RegisterPage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestingLayer/Test/TestClass1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestingLayer/TestingLayer.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LearnWizardNET/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLayer/CourseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/CourseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataLayer/IdentityContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/IdentityContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLayer/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLayer/Course.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataLayer/Migrations/LearnWizardAppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataLayer/Migrations/LearnWizardAppDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LearnWizardNET.sln" beforeDir="false" afterPath="$PROJECT_DIR$/LearnWizardNET.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Login.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Login.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Logout.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Logout.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Areas/Identity/Pages/Account/Register.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Controllers/AboutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/AboutController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Controllers/ContactController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/ContactController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Controllers/CoursesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/CoursesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/MVC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/MVC.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Courses/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Courses/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/About.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/Contact.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/Contact.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MVC/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Shared/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/Views/Users/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/Views/Users/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/wwwroot/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/show_q.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/site.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/js/transition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceLayer/Api.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceLayer/ServiceLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceLayer/ServiceLayer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery-validation/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery-validation/dist/additional-methods.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery-validation/dist/jquery.validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery/dist/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery/dist/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/wwwroot/lib/jquery/dist/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestLayer/CourseContextTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestLayer/CourseService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestLayer/SetupFixture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestLayer/TestLayer.csproj" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,10 +137,9 @@
     <setting file="file://$USER_HOME$/Downloads/Library11J/DataLayer/IDb.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/DataLayer/IdentityContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/DataLayer/LibraryDbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Areas/Identity/Pages/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Areas/Identity/Pages/Account/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Areas/Identity/Pages/Account/Register.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Library11J/MVCApplication/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/674907902e914e45b7b2f7544616060d421a00/5e/f91bec4c/ChromeDriver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/674907902e914e45b7b2f7544616060d421a00/b7/a98e7476/ChromiumDriver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6b5e9c4cb40043b6a8ecec4e15fa5bea2b6a0/fd/f8e6fec1/IdentityResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87bed8ddb3a8426686194432a8407b75d82200/f1/7a309a2c/Monitor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9912e9dd155f4f90886f876f6d33c93fc908/5c/8c2e7c71/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -120,10 +148,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a3e3d2e20cb34e39b35fad66e3c18118b0a0/cb/b284d060/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MVC/Views/Home/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MVC/Views/Home/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestingLayer/Base/BaseTest.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -138,40 +170,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.MVC: http.executor": "Run",
-    ".NET Launch Settings Profile.MVC: https.executor": "Run",
-    ".NET Project.SeedingLayer.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "XThreadsFramesViewSplitterKey": "0.5197368",
-    "git-widget-placeholder": "master",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "HotReloadSettingsPage",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.MVC: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.MVC: https.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.SeedingLayer.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Static Method.SeleniumDocs.Hello.Class1.Main.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Static Method.SeleniumDocs.Hello.HelloSelenium.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.5197368&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;HotReloadSettingsPage&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver",
-      "azure",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;,
+      &quot;azure&quot;,
+      &quot;mysql&quot;
     ],
-    "rider.external.source.directories": [
-      "/Users/antonmalchev/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
-      "/Users/antonmalchev/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
-      "/Users/antonmalchev/.local/share/Symbols/src"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Markdown&quot;
+    ],
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/antonmalchev/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/antonmalchev/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/antonmalchev/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RiderProblemsViewState">
     <hideBySeverity>
       <option value="20" />
@@ -214,6 +251,56 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="TestingLayer" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TestingLayer/TestingLayer.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="SeleniumDocs.Hello.Class1.Main" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+      <option name="EXE_PATH" value="$APPLICATION_HOME_DIR$/lib/ReSharperHost/JetLauncherILc.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TestingLayer/TestingLayer.csproj" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <option name="CLASS_NAME" value="SeleniumDocs.Hello.Class1" />
+      <option name="METHOD_NAME" value="Main" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="SeleniumDocs.Hello.HelloSelenium.Main" type="DotNetStaticMethod" factoryName=".NET Static Method" temporary="true">
+      <option name="EXE_PATH" value="$APPLICATION_HOME_DIR$/lib/ReSharperHost/JetLauncherILc.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TestingLayer/TestingLayer.csproj" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <option name="CLASS_NAME" value="SeleniumDocs.Hello.HelloSelenium" />
+      <option name="METHOD_NAME" value="Main" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="MVC: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MVC/MVC.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -244,6 +331,12 @@
         <option name="Build" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Static Method.SeleniumDocs.Hello.Class1.Main" />
+        <item itemvalue=".NET Static Method.SeleniumDocs.Hello.HelloSelenium.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -259,7 +352,12 @@
       <workItem from="1708712503716" duration="2717000" />
       <workItem from="1708925744533" duration="18362000" />
       <workItem from="1709017854074" duration="8279000" />
-      <workItem from="1709098426807" duration="6172000" />
+      <workItem from="1709098426807" duration="10684000" />
+      <workItem from="1712911222594" duration="4570000" />
+      <workItem from="1713263985592" duration="4322000" />
+      <workItem from="1713350582092" duration="906000" />
+      <workItem from="1713351503513" duration="11085000" />
+      <workItem from="1713772333898" duration="5361000" />
     </task>
     <task id="LOCAL-00001" summary="Identity">
       <option name="closed" value="true" />
@@ -309,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708682813780</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Frontend+courses">
+      <option name="closed" value="true" />
+      <created>1709105551775</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709105551775</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +442,8 @@
     <MESSAGE value="initial132" />
     <MESSAGE value="Identity2" />
     <MESSAGE value="improvements1" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvements1" />
+    <MESSAGE value="Frontend+courses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frontend+courses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

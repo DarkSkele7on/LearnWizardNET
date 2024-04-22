@@ -7,9 +7,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/header.css" runat="server">
-    <link rel="stylesheet" href="~/css/footer.css" runat="server">
     <link rel="stylesheet" href="~/css/style.css" runat="server">
+    <link rel="stylesheet" href="~/css/footer.css" runat="server"> 
+    <link rel="stylesheet" href="~/css/style.css" runat="server"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>@ViewData["Title"] - LearnWizard</title>
 </head>
@@ -44,7 +44,7 @@
         </main>
     </div>
     <footer>
-        <a href="Contact"><i class="fas fa-envelope" id="mitko"></i><p>2023 Learn Wizard</p></a>
+        <a asp-controller="Contact" asp-action="Index" class="nav-link text-dark"><i class="fas fa-envelope" id="mitko"></i></a>
     </footer>
     <environment exclude="Development">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"

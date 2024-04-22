@@ -4,6 +4,7 @@ using DataLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(LearnWizardAppDbContext))]
-    partial class LearnWizardAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240422083326_personalised1")]
+    partial class personalised1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,6 +33,9 @@ namespace DataLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Availability")
+                        .HasColumnType("int");
+
                     b.Property<int>("ContentPreferences")
                         .HasColumnType("int");
 
@@ -39,6 +45,9 @@ namespace DataLayer.Migrations
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<int>("ExpertiseLevel")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FeedbackFrequency")
                         .HasColumnType("int");
 
                     b.Property<string>("LearningGoals")
@@ -55,6 +64,11 @@ namespace DataLayer.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("SupportNeeds")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("TechTools")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");

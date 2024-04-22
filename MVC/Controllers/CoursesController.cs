@@ -34,7 +34,7 @@ namespace MVC.Controllers
         public async Task<IActionResult> Index()
         {
             //var LearnWizardAppDbContext = _context.Courses.Include(c => c._User);
-            return View(await _courseContext.ReadAllAsync());
+            return View(await _courseContext.ReadAllAsync(true,false));
         }
 
         // GET: Courses/Details/5
@@ -68,12 +68,12 @@ namespace MVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Course course)
+        public async Task<IActionResult> Create([Bind("Id,Name,ExpertiseLevel,LearningGoals,LearningStyle,ContentPreferences,SupportNeeds")] Course course)
         {
             // Check if the user is authenticated
             if (!User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index","Home"); 
+                return RedirectToAction("Index", "Home");
             }
 
             // Retrieve the user asynchronously
@@ -84,15 +84,23 @@ namespace MVC.Controllers
             }
 
             course.User = user;
-            course.UserId = course.User.Id;
-            var _description = await _api.GenerateCourseDescriptionAsync(course.Name);
+            course.UserId = user.Id;
+            var _description = await _api.GenerateCourseDescriptionAsync(
+                $"I command you to generate a course about {course.Name} as my expertise on the subject is {course.ExpertiseLevel} and i am {user.Age}, my learning goals are to {course.LearningGoals}, my learning style is {course.LearningStyle} and my content preference is {course.ContentPreferences}. Additionally: {course.SupportNeeds}");
             course.Description = _description;
 
             // Clear model state
             ModelState.Clear();
 
             // Try to update the model asynchronously
-            if (await TryUpdateModelAsync(course))
+            if (await TryUpdateModelAsync(course, 
+                    "",
+                    c => c.Name,
+                    c => c.ExpertiseLevel,
+                    c => c.LearningGoals,
+                    c => c.LearningStyle,
+                    c => c.ContentPreferences,
+                    c => c.SupportNeeds))
             {
                 // Save the course asynchronously
                 await _courseContext.CreateAsync(course);
@@ -102,6 +110,7 @@ namespace MVC.Controllers
             // If model update fails, prepare the ViewData and return the view
             return View(course);
         }
+
 
         // GET: Courses/Edit/5
         public async Task<IActionResult> Edit(int? id)

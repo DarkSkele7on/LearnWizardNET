@@ -1,8 +1,5 @@
 ﻿@model IEnumerable<BusinessLayer.Course>
 
-@{
-    ViewData["Title"] = "Index";
-}
 <head>
     <link rel="stylesheet" href="~/css/UserIndex.css"> <!-- Linking the login.css -->
     <title>Edit User</title>
@@ -26,21 +23,25 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a class="cta-button" asp-action="Details" asp-route-id="@item.Id">Details</a> 
-                <br/>
-                <br/>
-                <a class="cta-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+    @if (Model != null)
+    {
+        @foreach (var item in Model.Where(c => c.User.UserName == User.Identity.Name))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a class="cta-button" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <br/>
+                    <br/>
+                    <a class="cta-button" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    }
     </tbody>
 </table>

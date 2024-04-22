@@ -29,8 +29,7 @@ namespace MVC
             services.AddScoped<CourseContext, CourseContext>();
             services.AddScoped<IEmailSender, EmailSenderManager>();
             services.AddScoped<IdentityContext, IdentityContext>();
-            services.AddSingleton<OpenApi>(new OpenApi("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"));
-
+            services.AddSingleton<OpenApi>(new OpenApi(Environment.GetEnvironmentVariable("OPEN_AI_KEY")));
             
             services.AddDbContext<LearnWizardAppDbContext>(op =>
             {
